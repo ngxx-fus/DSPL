@@ -1,0 +1,25 @@
+% Consider the system: y[n] = x[n]x[n-1]
+% Determine linear property of the given system.
+clf;
+n = 0:0.3:100;
+
+x_A = 4*sin(pin/128);
+x_A_Zero_Padding = [x_A 0];
+x_A_1Sample_Delay = [0 x_A];
+y_A = x_A_Zero_Padding .* x_A_1Sample_Delay;
+
+
+x_B = 3*sin(pi*97);
+x_B_Zero_Padding = [x_B 0];
+x_B_1Sample_Delay = [0 x_B];
+y_B = x_B_Zero_Padding .* x_B_1Sample_Delay;
+
+a = 2;
+b=  7;
+
+x = a .* x_A + x_B;
+x_Zero_Padding = [x 0];
+x_1Sample_Delay= [0 x];
+y  = x_Zero_Padding .* x_1Sample_Delay;
+
+disp(sum(y - ))

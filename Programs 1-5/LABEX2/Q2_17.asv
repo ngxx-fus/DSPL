@@ -1,0 +1,13 @@
+n = 0:0.5:100;
+
+x = 3*cos(pi*n/97);
+x_Zero_Padding = [x 0];
+x_1Sample_Delay= [0 x];
+y = n .* x_Zero_Padding .* x_1Sample_Delay;
+
+D = 10;
+
+xd = [ zeros(D) x ];
+
+
+n = 0:0.5:100+0.5;
