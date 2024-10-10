@@ -16,8 +16,8 @@ subplot(2,2,2)
 plot(w/pi,abs(h3));grid
 title('Magnitude Spectrum of Convolved Sequence')
 subplot(2,2,3)
-plot(w/pi,angle(hp));grid
+plot(w/pi,angle(hp)); grid
 title('Sum of Phase Spectra')
 subplot(2,2,4)
-plot(w/pi,angle(h3));grid
+plot(w/pi,angle(h3)); grid
 title('Phase Spectrum of Convolved Sequence')

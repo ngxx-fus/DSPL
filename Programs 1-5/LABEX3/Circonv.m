@@ -1,4 +1,6 @@
-function y = circonv(x1,x2)
+%Hàm này được định nghĩa một cách thủ công
+%Thực hiện tính chập bằng bằng cách sử dụng vòng tròn
+function y = Circonv(x1,x2)
 L1 = length(x1); L2 = length(x2);
 if L1 ~= L2, error('Sequences of unequal lengths'), end
 y = zeros(1,L1);

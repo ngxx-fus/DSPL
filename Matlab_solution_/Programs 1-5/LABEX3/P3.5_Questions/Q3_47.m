@@ -18,6 +18,8 @@ disp(p);
 input('Hit <return> to continue...');
 % compute and display factored form of G(z)
 [sos k] = zp2sos(z, p, k)
+[sos k] = zp2sos(z, p, k)
 input('Hit <return> to continue...');
 % generate pole-zero plot
 zplane(z, p);
+disp(abs(p));

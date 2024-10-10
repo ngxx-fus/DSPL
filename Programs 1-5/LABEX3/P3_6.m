@@ -6,7 +6,7 @@ num = [1 2 3 4];
 L = length(num)-1;
 h1 = freqz(num, 1, w);
 h2 = freqz(fliplr(num), 1, w);
-h3 = exp(w*L*i).*h2;
+h3 = exp(w*L*1i).*h2;
 subplot(2,2,1)
 plot(w/pi,abs(h1));grid
 title('Magnitude Spectrum of Original Sequence')
