@@ -8,12 +8,15 @@ y = x1.*x2;
 h1 = freqz(x1, 1, w);
 h2 = freqz(x2, 1, w);
 h3 = freqz(y,1,w);
+
 subplot(3,1,1)
 plot(w/pi,abs(h1));grid
 title('Magnitude Spectrum of First Sequence')
+
 subplot(3,1,2)
 plot(w/pi,abs(h2));grid
 title('Magnitude Spectrum of Second Sequence')
+
 subplot(3,1,3)
 plot(w/pi,abs(h3));grid
 title('Magnitude Spectrum of Product Sequence')
