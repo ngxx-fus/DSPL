@@ -6,7 +6,7 @@ num1 = [1 3 5 7 9 11 13 15 17];
 L = length(num1);
 h1 = freqz(num1, 1, w);
 n = 0:L-1;
-num2 = exp(wo*1i*n).*num1;
+num2 = exp(wo*1i*n) .* num1;
 h2 = freqz(num2, 1, w);
 subplot(2,2,1)
 plot(w/pi,abs(h1));grid

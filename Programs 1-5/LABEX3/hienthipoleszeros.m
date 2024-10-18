@@ -13,10 +13,14 @@ H = freqz(num, den, freq_space);
 subplot(2,1,1);
 plot(freq_space, abs(H));
 title("pho bien do");
+ylabel("amp");
+xlabel("freq(unit: pi)");
 
 subplot(2,1,2);
 plot(freq_space, angle(H));
 title("pho pha");
+ylabel("arg");
+xlabel("freq(unit: pi)");
 
 % tf2zpk : transfer function -> z + p + k
 [Zeros, Poles, k] = tf2zpk(num, den);
@@ -36,6 +40,9 @@ ONDINH_BIEN=true;
 
 LP = length(Poles);
 LZ = length(Zeros);
+
+disp(isstable(tf2zpk(num, den)));
+
 for i=1:LP
     if abs(Poles(i)) >= 1
         ONDINH_NHANQUA = false;
